@@ -37,4 +37,7 @@ Run these following command in your terminal to setup :
 
 Once set up, run main.py.
 
-## To-do/potential improvements
+## To-do/potential improvements for Phase 5:
+
+- Implement GUI for the Calendar & command line
+- Add support for SoundCloud/Spotify playback
