@@ -1,5 +1,6 @@
 # Music-player
 
+The project is in the development phase 
 
 Note: Keep all the files in the same place
 
@@ -21,6 +22,8 @@ increase of options at our fingertips makes choosing what to listen to even hard
 nowadays don’t want to take the time to queue their own playlist, they want that process
 automated so that they can enjoy a playlist that compliments the activity they are participating in,
 whatever it may be.
+
+![image](https://user-images.githubusercontent.com/61298966/201265254-ddf4e1ef-aea2-46f2-9d95-f68a3fe1323b.png)
 
 
 ## Installation
