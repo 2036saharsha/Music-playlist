@@ -1,4 +1,5 @@
 # Music-playlist
 
 ## Install these dependencies: ##
-### pywhatkit- ###
+### pywhatkit- pip3 install pywhatkit ###
+
