@@ -1,4 +1,5 @@
 import pywhatkit
+import pyautogui
 import time
 class Music_Player:
     def __init__(self,songs):
@@ -9,7 +10,8 @@ class Music_Player:
             try:
                 pywhatkit.playonyt(song)
                 print("Playing...",song)
-                time.sleep(300)
+                time.sleep(140)
+                pyautogui.hotkey('ctrl', 'w')
             except:
                # printing the error message
                 print("Network Error Occurred") 
