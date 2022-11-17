@@ -39,7 +39,7 @@ class Playlist:
             songs.append(val)
         return songs
 
-    def PrintPlaylist(self, title):
+    def PrintPlaylist(self,title,eventName):
 
         songs=Playlist.filter_data(self)
         self.root = tk.Tk()
@@ -62,17 +62,19 @@ class Playlist:
         for song in songs:
             print(song)
         print('-------------------------------------------------')
-
+        self.database(songs,eventName)
         # songs_playing.pack()
         
         # p1=Thread(target=self.PlaySong(songs))
         # p2=Thread(target=self.root.mainloop())
         # p1.start()
         # p2.start
-
         
         self.root.mainloop()
-
+    def database(self,songs,eventName):
+        f = open("database.txt", "a")
+        f.write(f'{eventName} = {str(set(songs))}\n')
+        f.close()
     def PlaySong(self):
         songs=self.filter_data()
         player=Music_Player.Music_Player(songs)

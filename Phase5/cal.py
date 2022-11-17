@@ -35,4 +35,4 @@ class Phase5:
         print()
         newplaylist = Playlist.Playlist()
         newplaylist.PrintPlaylist('Playlist for: ' + Event_Name + ' on ' + Event_Date + ' from [' + Start_Time
-                                  + '-' + End_time + ']')
+                                  + '-' + End_time + ']',Event_Name)
