@@ -10,7 +10,7 @@ class Music_Player:
             try:
                 pywhatkit.playonyt(song)
                 print("Playing...",song)
-                time.sleep(50)
+                time.sleep(140)
                 pyautogui.hotkey('ctrl', 'w')
             except:
                # printing the error message

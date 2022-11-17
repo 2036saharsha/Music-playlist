@@ -6,18 +6,18 @@ from threading import Thread
 class Playlist:
     response = list()
     def __init__(self):
-        # artist1 = input("Name of the first artist you would like to hear: ")
-        # song1 = input("Name of a song by said artist, similar to what you'd like to hear: ")
-        # artist2 = input("Name of the second artist you'd like to hear: ")
-        # song2 = input("Name of a song by said artist: ")
+        artist1 = input("Name of the first artist you would like to hear: ")
+        song1 = input("Name of a song by said artist, similar to what you'd like to hear: ")
+        artist2 = input("Name of the second artist you'd like to hear: ")
+        song2 = input("Name of a song by said artist: ")
         print()
 
         url = "https://spotify-tracks.p.rapidapi.com/"
         payload = {
             "tracks": {
-                "taylor": "swift",
-                # artist2: song2,
-                # artist3: song3
+                artist1:song1,
+                artist2: song2,
+                
             },
             "n": 20
         }
@@ -57,7 +57,8 @@ class Playlist:
             playlist = tk.Label(self.root, text=song, font=("Times",10),bg="white",fg="black").place(x=x,y=y)
             y+=50
             # playlist.pack()
-
+        print("Songs added to the playlist")
+        print()
         for song in songs:
             print(song)
         print('-------------------------------------------------')
