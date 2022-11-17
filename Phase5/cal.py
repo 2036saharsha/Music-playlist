@@ -1,20 +1,20 @@
 from tkcalendar import *
 import Playlist
-from tkinter import *
+import tkinter as tk
 
 
 class Phase5:
     def __init__(self):
-        self.root = Tk()
+        self.root = tk.Tk()
         self.root.title('Event Planner!')
         self.root.geometry("600x400")
         self.cal1 = Calendar(self.root, selectmode="day", year=2022, month=11, day=17, foreground='red',
                              headersbackground='black')
         self.cal1.pack(pady=20)
-        self.label1 = Label(self.root, text="")
-        button1 = Button(self.root, text="Set Event Date", command=self.get_date)
+        self.label1 = tk.Label(self.root, text="")
+        button1 = tk.Button(self.root, text="Set Event Date", command=self.get_date)
         button1.pack(pady=20)
-        button2 = Button(self.root, text="Create Event", command=self.create_event)
+        button2 = tk.Button(self.root, text="Create Event", command=self.create_event)
         button2.pack(pady=20)
         self.label1.pack(pady=20)
 
