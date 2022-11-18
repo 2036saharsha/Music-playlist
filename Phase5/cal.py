@@ -2,11 +2,10 @@ from tkcalendar import *
 import Playlist
 import tkinter as tk
 
-
 class Phase5:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title('Event Planner!')
+        self.root.title('Event Planner')
         self.root.geometry("600x400")
         self.cal1 = Calendar(self.root, selectmode="day", year=2022, month=11, day=17, foreground='red',
                              headersbackground='black')
@@ -39,11 +38,7 @@ class Phase5:
         Start_Time = tk.StringVar()
         End_Time = tk.StringVar()
         
-        # testing labels
-        #label = tk.Label(self.top, text = "This is the second window").pack()
-        
-        # creating a label for
-        # name using widget Label
+        # creating labels and user input boxes, using the Label and Entry widgets
         name_label = tk.Label(self.top, text = "What do you want your event to be called?: ").pack()
         name_entry = tk.Entry(self.top, textvariable = Event_Name, font = ('calibre',10,'normal')).pack()
         
@@ -53,22 +48,14 @@ class Phase5:
         end_label = tk.Label(self.top, text = "What time will your event end? (Example: 8:00PM or 8PM): ").pack()
         end_entry = tk.Entry(self.top, textvariable = End_Time, font = ('calibre',10,'normal')).pack()
         
-        # creating a button using the widget
-        # Button that will call the submit function
+        # Creating a button using the widget
+        # Button will call the start_playlist function
         sub_btn = tk.Button(self.top, text = "Submit", command = lambda: self.start_playlist(str(Event_Date), str(Event_Name), str(Start_Time), str(End_Time)))
         sub_btn.pack()
-        
-        # placing the label and entry in
-        # the required position using grid
-        # method
-        #name_label.grid(row=0,column=0)
-        #name_entry.grid(row=0,column=1)
-        #start_label.grid(row=1,column=0)
-        #start_entry.grid(row=1,column=1)
-        #end_label.grid(row=2,column=0)
-        #end_entry.grid(row=2,column=1)
-        #sub_btn.grid(row=3,column=1)
 
+        
+        # Original method for getting user input:
+        
         # Date of event
         #Event_Date = self.cal1.get_date()
         # Name of event
